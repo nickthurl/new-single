@@ -42,15 +42,31 @@
         </header>
         <section class="text-center col-12">
           <hr>
+
           <a href="https://open.spotify.com/track/7sVo3u6f0RD2iJoSjdtPBJ?si=5e0431a6241743df">
-            <button class="btn btn-primary btn-xl">LISTEN ON SPOTIFY</button>
+            <button id="spotifyButton" class="btn btn-primary btn-xl">LISTEN ON SPOTIFY</button>
           </a><br>
+          <script type="text/javascript">
+            var spotifyButton = document.getElementById("spotifybutton");
+            spotifyButton.addEventListener("click", fbq('track', 'ViewContent', {content_name: 'Spotify'}));
+          </script>
+
           <a href="https://youtu.be/3f-iICei_ZU">
-            <button class="btn btn-primary btn-xl">VIEW MUSIC VIDEO</button>
+            <button id="youtubeButton" class="btn btn-primary btn-xl">VIEW MUSIC VIDEO</button>
           </a><br>
+          <script type="text/javascript">
+            var youtubeButton = document.getElementById("youtubeButton");
+            youtubeButton.addEventListener("click", fbq('track', 'ViewContent', {content_name: 'YouTube'}));
+          </script>
+
           <a href="https://music.apple.com/gb/album/hope-im-still-dreaming-single/1512568099">
-            <button class="btn btn-primary btn-xl">STREAM ON ITUNES</button>
+            <button id="itunesButton" class="btn btn-primary btn-xl">STREAM ON ITUNES</button>
           </a>
+          <script type="text/javascript">
+            var itunesButton = document.getElementById("itunesButton");
+            itunesButton.addEventListener("click", fbq('track', 'ViewContent', {content_name: 'iTunes'}));
+          </script>
+
         </section>
       </div>
     </div>
