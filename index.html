@@ -48,7 +48,7 @@
           </a><br>
           <script type="text/javascript">
             var spotifyButton = document.getElementById("spotifyButton");
-            spotifyButton.addEventListener("click", fbq('track', 'ViewContent', {content_name: 'Spotify'}));
+            spotifyButton.addEventListener("click", fbq('track', 'InitiateCheckout', {value: 'Spotify'}));
           </script>
 
           <a href="https://youtu.be/3f-iICei_ZU">
@@ -56,7 +56,7 @@
           </a><br>
           <script type="text/javascript">
             var youtubeButton = document.getElementById("youtubeButton");
-            youtubeButton.addEventListener("click", fbq('track', 'ViewContent', {content_name: 'YouTube'}));
+            youtubeButton.addEventListener("click", fbq('track', 'InitiateCheckout', {value: 'YouTube'}));
           </script>
 
           <a href="https://music.apple.com/gb/album/hope-im-still-dreaming-single/1512568099">
@@ -64,7 +64,7 @@
           </a>
           <script type="text/javascript">
             var itunesButton = document.getElementById("itunesButton");
-            itunesButton.addEventListener("click", fbq('track', 'ViewContent', {content_name: 'iTunes'}));
+            itunesButton.addEventListener("click", fbq('track', 'InitiateCheckout', {value: 'iTunes'}));
           </script>
 
         </section>
