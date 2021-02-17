@@ -1,7 +1,0 @@
-# dependencies
-/node_modules
-
-# misc
-client-info.txt
-package-lock.json
-package.json
