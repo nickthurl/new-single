@@ -43,28 +43,30 @@
         <section class="text-center col-12">
           <hr>
 
-          <a href="https://open.spotify.com/track/7sVo3u6f0RD2iJoSjdtPBJ?si=5e0431a6241743df">
-            <button id="spotifyButton" class="btn btn-primary btn-xl">LISTEN ON SPOTIFY</button>
+          <a id="spotifyButton" href="https://open.spotify.com/track/7sVo3u6f0RD2iJoSjdtPBJ?si=5e0431a6241743df">
+            <button class="btn btn-primary btn-xl">LISTEN ON SPOTIFY</button>
           </a><br>
-          <script type="text/javascript">
-            var spotifyButton = document.getElementById("spotifyButton");
-            spotifyButton.addEventListener("click", fbq('track', 'InitiateCheckout', {value: 'Spotify'}));
-          </script>
-
-          <a href="https://youtu.be/3f-iICei_ZU">
-            <button id="youtubeButton" class="btn btn-primary btn-xl">VIEW MUSIC VIDEO</button>
+          <a id="youtubeButton" href="https://youtu.be/3f-iICei_ZU">
+            <button class="btn btn-primary btn-xl">VIEW MUSIC VIDEO</button>
           </a><br>
-          <script type="text/javascript">
-            var youtubeButton = document.getElementById("youtubeButton");
-            youtubeButton.addEventListener("click", fbq('track', 'InitiateCheckout', {value: 'YouTube'}));
-          </script>
-
-          <a href="https://music.apple.com/gb/album/hope-im-still-dreaming-single/1512568099">
-            <button id="itunesButton" class="btn btn-primary btn-xl">STREAM ON ITUNES</button>
+          <a id="itunesButton" href="https://music.apple.com/gb/album/hope-im-still-dreaming-single/1512568099">
+            <button class="btn btn-primary btn-xl">STREAM ON ITUNES</button>
           </a>
+
           <script type="text/javascript">
             var itunesButton = document.getElementById("itunesButton");
-            itunesButton.addEventListener("click", fbq('track', 'InitiateCheckout', {value: 'iTunes'}));
+            var youtubeButton = document.getElementById("youtubeButton");
+            var spotifyButton = document.getElementById("spotifyButton");
+
+            itunesButton.addEventListener("click", () => {
+              fbq('trackCustom', 'ButtonClick', {media: 'iTunes'});
+            });
+            youtubeButton.addEventListener("click", () => {
+              fbq('trackCustom', 'ButtonClick', {media: 'YouTube'});
+            });
+            spotifyButton.addEventListener("click", () => {
+              fbq('trackCustom', 'ButtonClick', {media: 'Spotify'});
+            });
           </script>
 
         </section>
